@@ -511,7 +511,7 @@ st.markdown(
 )
 
 with st.sidebar:
-    st.markdown("### ⚛ System")
+    st.markdown("###System")
     system = st.selectbox(
         "Potential",
         [
@@ -528,7 +528,7 @@ with st.sidebar:
     grid_points = st.slider("Grid points", 150, 1200, 500, step=50)
 
     st.markdown("---")
-    st.markdown("### 🎛 Visualisation")
+    st.markdown("### Visualization")
     state_plot_mode = st.selectbox("State plot mode", ["|ψ|²", "ψ(x)", "Im[ψ(x)]"])
     packet_frame_ms = st.slider("Animation frame duration (ms)", 40, 200, 95, 5)
     packet_speed_factor = st.slider("Simulation speed factor", 0.25, 2.00, 0.60, 0.05)
