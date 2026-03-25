@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "quantum-sim",
+  "name": "quatum-mechanics-sim",
   "main": "src/index.py",
   "compatibility_date": "2026-03-24",
   "compatibility_flags": ["python_workers"]
