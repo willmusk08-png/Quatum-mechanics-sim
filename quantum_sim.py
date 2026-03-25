@@ -26,7 +26,6 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
-
 st.markdown(
     """
     <style>
@@ -170,13 +169,10 @@ def solve_schrodinger(x: np.ndarray, V: np.ndarray, num_states: int):
     states = normalize_states(x, states)
     return energies, states
 
-
 def make_particle_in_box(L: float, N: int):
     x = np.linspace(0, L, N + 2)[1:-1]
     V = np.zeros_like(x)
     return x, V
-
-
 def make_harmonic(x_max: float, N: int, omega: float):
     x = np.linspace(-x_max, x_max, N)
     V = 0.5 * MASS * omega**2 * x**2
@@ -303,9 +299,6 @@ def suggested_warnings(system: str, x: np.ndarray, V: np.ndarray, energies: np.n
     if system == "Particle in a Box" and num_states > 7 and len(x) < 300:
         warnings.append("Many excited box states on a modest grid can show visible discretisation error.")
     return warnings
-
-
-
 def fig_eigenstates(x, V, energies, states, title):
     fig = go.Figure()
     fig.add_trace(go.Scatter(
@@ -353,7 +346,6 @@ def fig_eigenstates(x, V, energies, states, title):
         height=460,
     ))
     return fig
-
 
 def fig_state_profile(x, psi, label, color="#00d4ff", mode="|ψ|²"):
     if mode == "ψ(x)":
