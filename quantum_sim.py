@@ -511,7 +511,7 @@ st.markdown(
 )
 
 with st.sidebar:
-    st.markdown("###System")
+    st.markdown("### System")
     system = st.selectbox(
         "Potential",
         [
@@ -589,13 +589,11 @@ with st.sidebar:
         E_analytical = None
         convergence_builder = None
 
-# Solve main system
 solve_start = time.perf_counter()
 energies, states = solve_schrodinger(x, V, num_states)
 solve_time_ms = 1000 * (time.perf_counter() - solve_start)
 dx = x[1] - x[0]
 
-# Header metrics
 m1, m2, m3, m4 = st.columns(4)
 m1.metric("Hamiltonian size", f"{len(x)} × {len(x)}")
 m2.metric("Grid spacing Δx", f"{dx:.4f}")
