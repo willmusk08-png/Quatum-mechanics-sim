@@ -1,0 +1,6 @@
+[project]
+name = "quantum-sim"
+version = "0.1.0"
+description = "Cloudflare Python Worker starter for a simulation endpoint"
+requires-python = ">=3.11"
+dependencies = []
